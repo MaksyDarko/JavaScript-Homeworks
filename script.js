@@ -1,62 +1,61 @@
-let priceTag = `33.33`;
+// 1st Exercise
+function calculateFahrenheit(celsius) {
+  return Math.floor((fahrenheit = (celsius * 9) / 5 + 32));
+}
 
-let priceNumber = Number(priceTag);
+const celsius = 26;
+let temperature = calculateFahrenheit(celsius);
+console.log(`${celsius}°C is equal to ${temperature}°F.`);
 
-let changePriceTag = (priceTag * 5).toFixed(2);
+// 2nd Exercise
+function compareNumbers(num1, num2) {
+  if (num1 > num2) {
+    return `The number ${num1} is bigger than the number ${num2}.`;
+  } else if (num1 < num2) {
+    return `The number ${num2} is bigger than the number ${num1}.`;
+  } else {
+    return `Both numbers are equal`;
+  }
+}
 
-console.log(changePriceTag);
+let num1 = 56;
+let num2 = 126;
+let result = compareNumbers(num1, num2);
+console.log(result);
 
-let randomNumber = Math.random();
+// 3rd Exercise
+function repeatString(str, times) {
+  return str.repeat(times);
+}
 
-randomNumber = randomNumber * 1000000;
+let str = `Hello Everyone `;
+let times = 3;
+let repeatResult = repeatString(str, times);
+console.log(`The message ${repeatResult} repeats ${times} times.`);
 
-let flooredNumber = Math.floor(randomNumber);
+// 4th Exercise
+function startsWithPrefix(string, prefix) {
+  return string.startsWith(prefix);
+}
 
-console.log(flooredNumber);
+let string = `Beautiful World`;
+let prefix = `Beautiful`;
+let prefixResult = startsWithPrefix(string, prefix);
+console.log(prefixResult);
 
-let ceiledNumber = Math.ceil(randomNumber);
+// 5th Exercise
+function greetingMessage(hour) {
+  if (hour < 0 || hour > 24) {
+    return "Invalid hour!";
+  } else if (hour < 12) {
+    return "Good morning!";
+  } else if (hour < 18) {
+    return "Good afternoon!";
+  } else {
+    return "Good evening!";
+  }
+}
 
-console.log(ceiledNumber);
-
-let roundNumber = Math.round(randomNumber);
-
-console.log(roundNumber);
-
-let truncatedNumber = Math.trunc(randomNumber);
-
-console.log(truncatedNumber);
-
-let distanceStr = `5.75`;
-
-let timeStr = `45m`;
-
-let distanceToNumber = Number(distanceStr);
-
-let timeToNumber = parseInt(timeStr);
-
-let totalSpeed = distanceToNumber / (timeToNumber / 60);
-
-let roundedSpeed = totalSpeed.toFixed(2);
-
-console.log(
-  `The marathone runner ran ${distanceToNumber} kilometers in ${timeToNumber} minutes, with a speed of ${roundedSpeed} km/h.`
-);
-
-let red = Math.floor(Math.random() * 256);
-let green = Math.floor(Math.random() * 256);
-let blue = Math.floor(Math.random() * 256);
-
-let randomColor = `rgb(${red}, ${green}, ${blue})`;
-
-console.log(randomColor);
-
-let phoneNumber = "(123)456-7890";
-
-let areaCode = Number(phoneNumber.substring(1, 4));
-
-let remainingDigits = Number(
-  phoneNumber.substring(5, 8) + phoneNumber.substring(9)
-);
-
-console.log("Area Code is:", areaCode);
-console.log("Remaining Digits are:", remainingDigits);
+const hour = 2;
+const greetingResult = greetingMessage(hour);
+console.log(greetingResult);
