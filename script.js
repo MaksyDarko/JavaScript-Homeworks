@@ -1,61 +1,66 @@
-// 1st Exercise
-function calculateFahrenheit(celsius) {
-  return Math.floor((fahrenheit = (celsius * 9) / 5 + 32));
+// 1st Task
+
+let userType = `Viewer`;
+
+switch (userType) {
+  case `Admin`:
+    console.log(`Welcome ${userType} you have full access.`);
+    break;
+
+  case `Editor`:
+    console.log(`Welcome ${userType} you can edit content.`);
+    break;
+
+  case `Viewer`:
+    console.log(`Welcome ${userType} you can view content.`);
+    break;
+
+  default:
+    console.log(`Sorry your role is not recognized`);
 }
 
-const celsius = 26;
-let temperature = calculateFahrenheit(celsius);
-console.log(`${celsius}°C is equal to ${temperature}°F.`);
+// 2nd Task
 
-// 2nd Exercise
-function compareNumbers(num1, num2) {
-  if (num1 > num2) {
-    return `The number ${num1} is bigger than the number ${num2}.`;
-  } else if (num1 < num2) {
-    return `The number ${num2} is bigger than the number ${num1}.`;
-  } else {
-    return `Both numbers are equal`;
-  }
+let operatingSystem = `Linuxs`;
+
+switch (operatingSystem) {
+  case `Windows`:
+    console.log(`Welcome user your operating system is: ${operatingSystem}`);
+    break;
+
+  case `MacOs`:
+    console.log(`Welcome user your operating system is: ${operatingSystem}`);
+    break;
+
+  case `Linux`:
+    console.log(`Welcome user your operating system is: ${operatingSystem}`);
+    break;
+
+  default:
+    console.log(`${operatingSystem} Operating system is not recognized. `);
 }
 
-let num1 = 56;
-let num2 = 126;
-let result = compareNumbers(num1, num2);
-console.log(result);
+// 3rd Task
 
-// 3rd Exercise
-function repeatString(str, times) {
-  return str.repeat(times);
+for (let i = 1; i < 100; i += 2) {
+    console.log(i)
 }
 
-let str = `Hello Everyone `;
-let times = 3;
-let repeatResult = repeatString(str, times);
-console.log(`The message ${repeatResult} repeats ${times} times.`);
+// 4th Task
 
-// 4th Exercise
-function startsWithPrefix(string, prefix) {
-  return string.startsWith(prefix);
+let fruitArray = ["apple", "banana", "cherry", "orange"];
+
+for (let i = 0; i < fruitArray.length; i++) {
+  let upperCaseFruit = fruitArray[i].toUpperCase();
+  let charCount = fruitArray[i].length;
+  console.log(`The fruit ${upperCaseFruit} has ${charCount} characters`);
 }
 
-let string = `Beautiful World`;
-let prefix = `Beautiful`;
-let prefixResult = startsWithPrefix(string, prefix);
-console.log(prefixResult);
+// 5th Task
 
-// 5th Exercise
-function greetingMessage(hour) {
-  if (hour < 0 || hour > 24) {
-    return "Invalid hour!";
-  } else if (hour < 12) {
-    return "Good morning!";
-  } else if (hour < 18) {
-    return "Good afternoon!";
-  } else {
-    return "Good evening!";
-  }
+let whiteSpaceArray = [`  us er44444  `, `user2 23  `, `userna me12334  `];
+
+for(let i = 0; i < whiteSpaceArray.length; i ++) {
+  let replaceArray = whiteSpaceArray[i].replaceAll(` `, ``);
+  console.log(`The username ${whiteSpaceArray[i]} had white spaces and is fixed to ${replaceArray}.`)
 }
-
-const hour = 2;
-const greetingResult = greetingMessage(hour);
-console.log(greetingResult);
