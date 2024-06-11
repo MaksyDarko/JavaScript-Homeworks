@@ -68,8 +68,6 @@ let result = [];
 for (let number of numbers) {
   result[numbers.indexOf(number)] = number * number;
 }
-// Procitav deka .join ja pretvara nizata vo string i gi spojuva elementite so zapirka i prazno mesto,
-// Go imav prvicnoto resenie bez .join no barav nacin kako da go prikazam pocitko da bide :)
 console.log(`The squares of numbers from 1 to 5 are: ${result.join(", ")}`);
 
 // 5th Task
