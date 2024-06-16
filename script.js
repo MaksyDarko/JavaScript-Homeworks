@@ -84,7 +84,7 @@ console.log(findByDirector);
 // Task 2 - Some Method
 // Here we check if there are any movies released before the year 2000.
 
-const hasOldMovies = movies.some((movie) => movie.year > 2000);
+const hasOldMovies = movies.some((movie) => movie.year < 2000);
 console.log(hasOldMovies);
 
 // Task 3 - Every Method
